@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Welcome!</h1>
+ 
+ <form action="/login" method="post">
+  <label for="email">Email:</label>
+    <input type="text" name="email">
+    <p></p>
+    <label for="password">Password:</label>
+    <input type="text" name="password">
+    <p></p>
+    <input type="submit" value="Login!">
+
+  </form><br>
+<h3><a href="/sign_up">Sign Up</a></h3>
+<p></p>
+
+<ul>
+<% @users.each do |user| %>
+<li> <%= user.first_name %> <br>Email: <%= user.email %> <br>Pass: <%= user.password %></li><br>
+<% end %>
+</ul>
+
+</div>
